@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+   - name: Install base system packages
+     become: true
+     yum:
+       state: present
+       name: ['python3-pip','git']
+     when: ansible_distribution ==  'Rocky' or ansible_distribution == 'CentOS'
+
+
+   - name: Install Pip dependencies as vagrant user
+     become: true
+     become_user: vagrant
+     pip: requirements=/vagrant/requirements.txt
