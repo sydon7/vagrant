@@ -8,5 +8,9 @@
        state: present
        name: ['python3-pip','git']
 
-    - name: Install Pip dependencies
-      pip: requirements=/vagrant/requirements.txt
+
+   - name: upgrade/patsh the server
+     apt: upgrade=yes update_cache=yes
+
+   - name: Install Pip dependencies
+     pip: requirements=/vagrant/requirements.txt
