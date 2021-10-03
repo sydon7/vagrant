@@ -1,2 +1,2 @@
 # vagrant
-Vagrant examples
+Vagrant files to build a base VM using ansible for the post install

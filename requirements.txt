@@ -1,0 +1,3 @@
+ansible-base<3.0.0
+ansible<3.0.0
+netaddr
