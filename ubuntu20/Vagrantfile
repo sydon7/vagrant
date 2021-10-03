@@ -19,7 +19,6 @@ Vagrant.configure("2") do |config|
       myvm.vm.provision "shell", inline: <<-SHELL
        apt-get update
        apt-get install -y python3-pip
-       pip3 install -r /vagrant/requirements.txt 
       SHELL
 
       # now use ansible to finish the build
